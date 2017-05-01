@@ -1,0 +1,40 @@
+#new-task {
+  width: 100em;
+  max-width: 96vw;
+  margin: 3ex auto 1ex auto;
+  display: grid;
+  grid-template: auto / 5em 1fr;
+  align-items: start;
+  border-radius: 0.75ex;
+  background-color: white;
+}
+
+#add-task-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 1ex);
+  margin: 0.5ex 0 0.5ex 0.5ex;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+#new-task-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+#new-title,
+#new-description {
+  width: 97%;
+  font-size: 100%;
+  margin: 0.5ex;
+  border: rgba(0, 0, 0, 0);
+}
+
+#new-title {
+  margin-bottom: 0;
+}

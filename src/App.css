@@ -1,0 +1,20 @@
+body {
+  background-color: darkslateblue;
+}
+
+header {
+  /* for more info on including images read: https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-images-fonts-and-files */
+  /* In addition, the image was converted to an ico via http://www.favicon.cc/ The generated ico was then used in the `../public/index.html` file.
+  /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Checkmark_green.svg/885px-Checkmark_green.svg.png');*/
+  background-image: url('./images/checkmark.png');
+  background-repeat: no-repeat;
+  background-size: 7ex auto;
+  display: grid;
+  grid-template: auto / 1fr 13.5em;
+  margin: 1ex 2em;
+}
+
+#show-tasks {
+  grid-column: 2;
+  color: slategrey;
+}

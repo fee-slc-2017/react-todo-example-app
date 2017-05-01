@@ -1,0 +1,59 @@
+.task {
+  width: 100em;
+  max-width: 96vw;
+  margin: 1ex auto;
+  display: grid;
+  grid-template: auto / 5.5em 1fr;
+  align-items: start;
+  border-radius: 0.75ex;
+}
+
+.task-detail {
+  width: auto;
+}
+
+.task-detail h2 {
+  margin: 0.5ex;
+}
+
+.task-detail p {
+  margin: 0.5ex 0.75ex;
+}
+
+.task-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1ex;
+}
+
+.task-todo {
+  background-color: white;
+}
+
+.task-todo .task-status p {
+  margin: -0.25ex auto 0 auto;
+  font-size: 300%;
+  font-weight: bold;
+}
+
+.task-completed {
+  color: #666666;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.task-completed .task-status {
+  background-color: transparent;
+}
+
+.task-completed .task-status p  {
+  margin: 0.1ex;
+}
+
+.completed-time {
+  font-size: 1.5em;
+}
+
+.completed-date {
+  font-size: 0.7em;
+}
