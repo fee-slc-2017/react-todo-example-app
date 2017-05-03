@@ -1,10 +1,21 @@
 // create-react-app uses App.js as the root component
 // start each component by importing the necessary libraries and files
 import React, { Component } from 'react'
+import Rebase from 're-base'
 import TaskShow from './TaskShow'
 import TaskAdd from './TaskAdd'
 import TaskList from './TaskList'
 import './App.css'
+
+
+const base = Rebase.createClass({
+  apiKey: "AIzaSyCz-ryRD2FU0ZuWhTrZMsL0PAT01KEdB88",
+  authDomain: "react-todo-378a2.firebaseapp.com",
+  databaseURL: "https://react-todo-378a2.firebaseio.com",
+  projectId: "react-todo-378a2",
+  storageBucket: "react-todo-378a2.appspot.com",
+  messagingSenderId: "64121003357"
+}, 'react-todo-378a2');
 
 // Keep all your state in App.js
 // because it uses more than just plain HTML and props,
@@ -53,6 +64,21 @@ class App extends Component {
          },
        },
     }
+  }
+
+  componentDidMount(){
+    base.syncState(`todoList`, {
+      context: this,
+      state: 'tasks',
+    });
+    base.syncState(`showOptions`, {
+      context: this,
+      state: 'show',
+    });
+  }
+
+  componentWillUnmount(){
+    base.removeBinding(this.ref);
   }
 
   // addTask, completeTask, toggleView, and filterTasks are all functions that
